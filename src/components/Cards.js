@@ -1,20 +1,16 @@
 import { Col, Container, Row } from "react-bootstrap";
-import CardDataUser from "./CardDataUser";
 import CardDocType from "./CardDocType";
-import CardUser from "./CardUser";
+import CardSegmentos from "./CardSegmentos";
 
 function Cards(){
     return(
-    <Container>
-        <Row className="gap-1 pt-4">
-            <Col>
-                <CardUser />
-            </Col>
+    <Container className= 'mt-4 d-flex justify-content-center align-center'>
+        <Row className="gap-2 align-center">
                 <Col>
                     <CardDocType />
                 </Col>
                     <Col>
-                        <CardDataUser />
+                        <CardSegmentos />
                     </Col>
         </Row>
     </Container>

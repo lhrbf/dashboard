@@ -7,8 +7,8 @@ function NavbarHome() {
   return (
     <>
       <Navbar expand="lg" className='navegacao'>
-      <Container className='container-fluid gap-4 ms-4'>
-        <Navbar.Brand href="#home" className='text-white fs-3'>Di2Win</Navbar.Brand>
+      <Container className='container-fluid gap-3 ms-2'>
+        <Navbar.Brand href="#home" className='text-white fs-3 fw-bold'>Di2Win</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="gap-3">
