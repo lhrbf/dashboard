@@ -1,4 +1,5 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
+import minhaImagem from '../imgs/figura_robo-removebg-preview.png'
 
 
 function ContainerSup(){
@@ -14,7 +15,7 @@ function ContainerSup(){
                     </Row>
               </Col>
                 <Col>
-                    <Image src= ""/>
+                    <Image src= {minhaImagem} alt= "figura robô"/>
                 </Col>
             </Row>
         </Container>

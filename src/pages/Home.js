@@ -3,7 +3,8 @@ import ContainerSup from "../components/ContainerSup";
 import QtdUsersData from "../components/QtdUsersData";
 import GraficoDocType from "../components/GraficoDocType";
 import GraficoSegmentos from "../components/GraficoSegmentos";
-import { Col, Row } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
+import logo from '../imgs/BackgroundEraser_20231112_212322950.png'
 
 function Home(){
     return(
@@ -19,6 +20,7 @@ function Home(){
                 <GraficoSegmentos />
             </Col>
         </Row>
+        <Image src={logo} alt="logo Di2Win" />
         </>
     );
 };
