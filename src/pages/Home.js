@@ -1,7 +1,9 @@
-import Cards from "../components/Cards";
 import NavbarHome from "../components/NavbarHome";
 import ContainerSup from "../components/ContainerSup";
 import QtdUsersData from "../components/QtdUsersData";
+import GraficoDocType from "../components/GraficoDocType";
+import GraficoSegmentos from "../components/GraficoSegmentos";
+import { Col, Row } from "react-bootstrap";
 
 function Home(){
     return(
@@ -9,7 +11,14 @@ function Home(){
         <NavbarHome />
         <ContainerSup />
         <QtdUsersData />
-        <Cards />
+        <Row>
+          <Col>
+            <GraficoDocType />
+          </Col>
+            <Col>
+                <GraficoSegmentos />
+            </Col>
+        </Row>
         </>
     );
 };

@@ -1,4 +1,5 @@
-import { Card, Row, Col, Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
+import { AiOutlineUser } from "react-icons/ai";
 
 function QtdUsersData(){
     return(
@@ -6,21 +7,14 @@ function QtdUsersData(){
     <Card className="text-center shadow my-3" border= "danger-subtle">
       <Card.Header>Usuarios Cadastrados</Card.Header>
       <Card.Body>
-        <Row className='p-2'>
-            <Col>
-                Grafico
-            </Col>
-        </Row>
+            <AiOutlineUser />
+                <p>3 usuários cadastrados</p>
       </Card.Body>
     </Card>
         <Card className="text-center shadow" border= "danger-subtle">
         <Card.Header>Data de cadastro dos usuarios</Card.Header>
         <Card.Body>
-            <Row className='p-2'>
-                <Col >
-                    Grafico
-                </Col>
-            </Row>
+             <p>00/00/0000</p>
         </Card.Body>
         </Card>
 </Container>   
