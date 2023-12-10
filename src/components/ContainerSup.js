@@ -1,22 +1,17 @@
-import { Col, Container, Image, Row } from "react-bootstrap";
-import minhaImagem from '../imgs/figura_robo-removebg-preview.png'
-
+import { Col, Container, Row } from "react-bootstrap";
 
 function ContainerSup(){
     return(
-        <Container fluid className='bg-dark py-4' border="danger-subtle">
-            <Row className='justify-content-beetween'>
-              <Col className='ms-1 text-white'>
-                <Row>
-                    <h3>Dashboard</h3><br></br>
+        <Container fluid className='bg-dark py-4 d-flex justify-content-center align-center' border="danger-subtle">
+            <Row className= 'align-center ms-1'>
+              <Col>
+                <Row className= 'text-white fs-2 fw-bold ms-2'>
+                    <p>Dashboard</p>
                 </Row>
-                    <Row>
-                        <h5>Análise de dados</h5>
+                    <Row className= 'text-white fs-3'>
+                        <p>Análise de dados</p>
                     </Row>
               </Col>
-                <Col>
-                    <Image src= {minhaImagem} alt= "figura robô"/>
-                </Col>
             </Row>
         </Container>
     )
