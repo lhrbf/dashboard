@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
 const GraficoDocType = () => {
-  const data = {
-    labels: ['CNH', 'Endividamento', 'Posição consolidada'],
+  const [docTypeData, setDocTypeData] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/extracts/docTypeData")
+      .then((response) => response.json())
+      .then((data) => {
+        setDocTypeData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching document type data:", error);
+      });
+  }, []);
+
+  const chartData = {
+    labels: docTypeData.map((docType) => docType.docType),
     datasets: [{
-      data: [30, 40, 30],
-      backgroundColor: ['rgba(255, 99, 132, 0.8)', 'rgba(54, 162, 235, 0.8)', 'rgba(255, 205, 86, 0.8)'],
+      data: docTypeData.map((docType) => docType.count),
+      backgroundColor: docTypeData.map((docType) => docType.color),
       borderWidth: 2,
     }],
   };
@@ -34,7 +47,7 @@ const GraficoDocType = () => {
 
   return (
     <div>
-      <Doughnut id="graficoDocType" data={data} options={options} />
+      <Doughnut id="graficoDocType" data={chartData} options={options} />
     </div>
   );
 };
